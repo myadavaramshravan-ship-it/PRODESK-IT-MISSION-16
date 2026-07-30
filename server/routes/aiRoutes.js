@@ -8,10 +8,9 @@ const validate = require("../middleware/validateMiddleware");
 
 const aiSchema = require("../validation/aiValidation");
 
-router.post(
-  "/suggest",
-  validate(aiSchema),
-  getSuggestion
-);
+const {aiLimiter}=require("../middleware/rateLimiter");
+
+
+router.post("/suggest",aiLimiter,validate(aiSchema),getSuggestion);
 
 module.exports = router;
