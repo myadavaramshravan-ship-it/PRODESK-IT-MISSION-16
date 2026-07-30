@@ -1,4 +1,4 @@
-# Mechanic Booking System 🚗
+# AI integrated full-stack web application
 
 A full-stack web application that helps mechanic workshops manage vehicle service bookings digitally.  
 The system replaces manual paper and Excel-based booking management with a modern dashboard for creating, updating, tracking, and managing customer vehicle services.
