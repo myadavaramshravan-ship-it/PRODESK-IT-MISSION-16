@@ -1,9 +1,14 @@
 import api from "./api";
 
-export const getSuggestion = async (prompt) => {
-  const response = await api.post("/api/ai/suggest", {
-    prompt,
-  });
+export const askAssistant = async (prompt) => {
 
-  return response.data;
+    const response = await api.post(
+        "/api/ai/suggest",
+        {
+            prompt
+        }
+    );
+
+    return response.data;
+
 };
