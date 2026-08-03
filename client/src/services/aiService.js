@@ -1,11 +1,9 @@
-import axios from "axios";
+import api from "./api";
 
-const API_URL = "http://localhost:5000/api/ai/suggest";
-
-export const askAssistant = async (prompt) => {
-  const { data } = await axios.post(API_URL, {
+export const getSuggestion = async (prompt) => {
+  const response = await api.post("/api/ai/suggest", {
     prompt,
   });
 
-  return data;
+  return response.data;
 };
